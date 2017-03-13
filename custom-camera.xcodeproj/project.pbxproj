@@ -14,6 +14,7 @@
 		FCD181781E771D2500A488D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD181761E771D2500A488D4 /* LaunchScreen.storyboard */; };
 		FCD181831E771D2500A488D4 /* custom_cameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD181821E771D2500A488D4 /* custom_cameraTests.swift */; };
 		FCD1818E1E771D2500A488D4 /* custom_cameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1818D1E771D2500A488D4 /* custom_cameraUITests.swift */; };
+		FCD1819C1E77216800A488D4 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1819B1E77216800A488D4 /* CameraVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FCD181891E771D2500A488D4 /* custom-cameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "custom-cameraUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD1818D1E771D2500A488D4 /* custom_cameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = custom_cameraUITests.swift; sourceTree = "<group>"; };
 		FCD1818F1E771D2500A488D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD1819B1E77216800A488D4 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				FCD181741E771D2500A488D4 /* Assets.xcassets */,
 				FCD181761E771D2500A488D4 /* LaunchScreen.storyboard */,
 				FCD181791E771D2500A488D4 /* Info.plist */,
+				FCD1819B1E77216800A488D4 /* CameraVC.swift */,
 			);
 			path = "custom-camera";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD181701E771D2500A488D4 /* ViewController.swift in Sources */,
+				FCD1819C1E77216800A488D4 /* CameraVC.swift in Sources */,
 				FCD1816E1E771D2500A488D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
