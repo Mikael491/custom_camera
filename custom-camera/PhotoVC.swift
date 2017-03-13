@@ -19,6 +19,10 @@ class PhotoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let photo = photo {
+            photoImageView.image = photo
+        }
+        
     }
     
     @IBAction func backButtonTapped(sender: UIButton) {
