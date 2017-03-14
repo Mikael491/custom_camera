@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class CameraVC: UIViewController {
+class CameraVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     let captureSession = AVCaptureSession()
     var previewLayer: CALayer!
@@ -19,11 +19,6 @@ class CameraVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCamera()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("MIKAEL: view did appear....")
     }
     
     func setupCamera() {
@@ -56,10 +51,60 @@ class CameraVC: UIViewController {
             self.previewLayer.frame = self.view.layer.frame
             captureSession.startRunning()
             
+            let dataOutput = AVCaptureVideoDataOutput()
+            dataOutput.videoSettings = [(kCVPixelBufferPixelFormatTypeKey as NSString):NSNumber(value: kCVPixelFormatType_32BGRA)]
+            dataOutput.alwaysDiscardsLateVideoFrames = true
             
+            if captureSession.canAddOutput(dataOutput) {
+                captureSession.addOutput(dataOutput)
+            }
+            
+            captureSession.commitConfiguration()
+            
+            let queue = DispatchQueue(label: "com.mikaelTeklehaimanot.captureSessionQueue")
+            dataOutput.setSampleBufferDelegate(self, queue: queue)
             
         }
         
     }
+    
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+        
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
