@@ -15,9 +15,10 @@ class CameraVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     var previewLayer: CALayer!
     
     var captureDevice: AVCaptureDevice!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    var takePhoto = false
+    
+    override func viewWillAppear(_ animated: Bool) {
         setupCamera()
     }
     
@@ -68,8 +69,47 @@ class CameraVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         
     }
     
+    @IBAction func takePhotoButtonTapped(sender: UIButton) {
+        takePhoto = true
+    }
+    
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+        if takePhoto {
+            takePhoto = false
+            if let image = self.getPhotoFromSampleBuffer(sampleBuffer) {
+                DispatchQueue.main.async {
+                    let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoVC") as! PhotoVC
+                    photoVC.photo = image
+                    
+                    self.present(photoVC, animated: true, completion: {
+                        self.stopSession()
+                    })
+                }
+            }
+            
+        }
+    }
+    
+    func getPhotoFromSampleBuffer(_ buffer: CMSampleBuffer) -> UIImage? {
         
+        if let imageBuffer = CMSampleBufferGetImageBuffer(buffer) {
+            let ciImage = CIImage(cvImageBuffer: imageBuffer)
+            let ciContext = CIContext()
+            let imageRect = CGRect(x: 0, y: 0, width: CVPixelBufferGetWidth(imageBuffer), height: CVPixelBufferGetHeight(imageBuffer))
+            if let image = ciContext.createCGImage(ciImage, from: imageRect) {
+                return UIImage(cgImage: image)
+            }
+        }
+        
+        return nil
+    }
+    
+    func stopSession() {
+        if let inputs = captureSession.inputs as? [AVCaptureDeviceInput] {
+            for input in inputs {
+                captureSession.removeInput(input)
+            }
+        }
     }
 
 }
