@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FCD1816E1E771D2500A488D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1816D1E771D2500A488D4 /* AppDelegate.swift */; };
-		FCD181701E771D2500A488D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1816F1E771D2500A488D4 /* ViewController.swift */; };
+		FCD181701E771D2500A488D4 /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1816F1E771D2500A488D4 /* PhotoVC.swift */; };
 		FCD181731E771D2500A488D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD181711E771D2500A488D4 /* Main.storyboard */; };
 		FCD181751E771D2500A488D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD181741E771D2500A488D4 /* Assets.xcassets */; };
 		FCD181781E771D2500A488D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD181761E771D2500A488D4 /* LaunchScreen.storyboard */; };
 		FCD181831E771D2500A488D4 /* custom_cameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD181821E771D2500A488D4 /* custom_cameraTests.swift */; };
 		FCD1818E1E771D2500A488D4 /* custom_cameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1818D1E771D2500A488D4 /* custom_cameraUITests.swift */; };
+		FCD1819C1E77216800A488D4 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1819B1E77216800A488D4 /* CameraVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		FCD1816A1E771D2400A488D4 /* custom-camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "custom-camera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD1816D1E771D2500A488D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCD1816F1E771D2500A488D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCD1816F1E771D2500A488D4 /* PhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
 		FCD181721E771D2500A488D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCD181741E771D2500A488D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCD181771E771D2500A488D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		FCD181891E771D2500A488D4 /* custom-cameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "custom-cameraUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD1818D1E771D2500A488D4 /* custom_cameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = custom_cameraUITests.swift; sourceTree = "<group>"; };
 		FCD1818F1E771D2500A488D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD1819B1E77216800A488D4 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				FCD1816D1E771D2500A488D4 /* AppDelegate.swift */,
-				FCD1816F1E771D2500A488D4 /* ViewController.swift */,
+				FCD1816F1E771D2500A488D4 /* PhotoVC.swift */,
 				FCD181711E771D2500A488D4 /* Main.storyboard */,
 				FCD181741E771D2500A488D4 /* Assets.xcassets */,
 				FCD181761E771D2500A488D4 /* LaunchScreen.storyboard */,
 				FCD181791E771D2500A488D4 /* Info.plist */,
+				FCD1819B1E77216800A488D4 /* CameraVC.swift */,
 			);
 			path = "custom-camera";
 			sourceTree = "<group>";
@@ -262,7 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCD181701E771D2500A488D4 /* ViewController.swift in Sources */,
+				FCD181701E771D2500A488D4 /* PhotoVC.swift in Sources */,
+				FCD1819C1E77216800A488D4 /* CameraVC.swift in Sources */,
 				FCD1816E1E771D2500A488D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
