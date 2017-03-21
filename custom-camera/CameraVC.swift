@@ -69,6 +69,33 @@ class CameraVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         
     }
     
+    @IBAction func switchCameraButtonTapped(sender: UIButton) {
+        switchCamera()
+    }
+    
+    func switchCamera() {
+        //find current input
+        if let currentInput = captureSession.inputs.first as? AVCaptureInput {
+            
+            //remove current input
+            captureSession.removeInput(currentInput)
+            
+            //get new new device
+            if captureDevice.position == AVCaptureDevicePosition.back {
+                if let availableDevices = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .front).devices {
+                    captureDevice = availableDevices.first
+                    beginSession()
+                }
+            } else {
+                if let availableDevices = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .back).devices {
+                    captureDevice = availableDevices.first
+                    beginSession()
+                }
+            }
+            
+        }
+    }
+    
     @IBAction func takePhotoButtonTapped(sender: UIButton) {
         takePhoto = true
     }
