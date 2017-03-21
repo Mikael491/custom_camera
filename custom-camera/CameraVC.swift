@@ -35,6 +35,7 @@ class CameraVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         
     }
     
+    //TODO: Make this function asynchronous
     func beginSession() {
         
         //get input from device and add to session
@@ -73,7 +74,6 @@ class CameraVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         switchCamera()
     }
     
-    //TODO: Make this function asynchronous
     func switchCamera() {
         //find current input
         if let currentInput = captureSession.inputs.first as? AVCaptureInput {
