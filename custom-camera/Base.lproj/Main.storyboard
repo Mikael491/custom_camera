@@ -20,7 +20,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyN-qD-CUj">
+                                <rect key="frame" x="316" y="629" width="59" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchCameraButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rRm-UN-RM3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tyN-qD-CUj" secondAttribute="bottom" constant="8" id="f0K-7Z-zeb"/>
+                            <constraint firstItem="tyN-qD-CUj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="565" id="gxq-Gl-b7n"/>
+                            <constraint firstItem="tyN-qD-CUj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="316" id="hF7-s2-cMi"/>
+                            <constraint firstAttribute="trailing" secondItem="tyN-qD-CUj" secondAttribute="trailing" id="w5b-ZA-CHJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GQt-hB-zoc">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="rbd-eo-rfn">
