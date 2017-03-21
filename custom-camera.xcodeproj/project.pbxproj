@@ -196,7 +196,7 @@
 				TargetAttributes = {
 					FCD181691E771D2400A488D4 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 89W2VT2ZMS;
+						DevelopmentTeam = 2WAWR77T4M;
 						ProvisioningStyle = Automatic;
 					};
 					FCD1817D1E771D2500A488D4 = {
@@ -419,11 +419,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 89W2VT2ZMS;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2WAWR77T4M;
 				INFOPLIST_FILE = "custom-camera/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mikael.custom-camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -432,11 +435,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 89W2VT2ZMS;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2WAWR77T4M;
 				INFOPLIST_FILE = "custom-camera/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mikael.custom-camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -518,6 +524,7 @@
 				FCD181941E771D2500A488D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCD181951E771D2500A488D4 /* Build configuration list for PBXNativeTarget "custom-cameraTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +533,7 @@
 				FCD181971E771D2500A488D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCD181981E771D2500A488D4 /* Build configuration list for PBXNativeTarget "custom-cameraUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +542,7 @@
 				FCD1819A1E771D2500A488D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
